@@ -1,0 +1,288 @@
+/* Main */
+html, body {
+  height: 100%;
+  margin: 0 auto;
+}
+body {
+  background: url(../img/trump.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial,"Liberation Sans",sans-serif;
+  font-size: 10pt;
+  moz-background-size: cover;
+  o-background-size: cover;
+  webkit-background-size: cover;
+}
+/* Info */
+.info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.99);
+}
+.info:hover {
+  background: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+.info .fa-2 {
+  font-size: 2em;
+}
+.info .popup {
+  display:none;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  left: 25px;
+  top: 40px;
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+/* Tweet */
+p {
+  color: #3d3d3d;
+}
+p, a, span {
+  margin: 10px 0 0 0;
+}
+a, a:visited {
+  color: #427fed;
+}
+a:hover {
+  color: #82afff;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+  margin: 5px;
+  overflow: hidden;
+  padding: 5px;
+}
+#tweetWrapper {
+  background-color: white;
+  border: 1px solid #dedede;
+  bottom: 10%;
+  position: absolute;
+  right: 10%;
+  width: 300px;
+}
+#tweetWrapper:before {
+  border-bottom: 13px solid transparent;
+  border-right: 20px solid white;
+  border-top: 13px solid transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+}
+.user, .tweet, .timePosted {
+  float: left;
+}
+.user {
+  width: 100%;
+}
+.tweet {
+  text-align: center;
+  width: 100%;
+}
+.timePosted {
+  text-align: center;
+  width: 100%;
+}
+.user {
+  clear: left;
+}
+.user a {
+  width: 100px;
+}
+.user a > span {
+  float: left;
+}
+.user a > span {
+  margin-left: 10px;
+}
+.user img {
+  display: none;
+}
+/* Bubbles */
+.bubbles {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.bubble-container {
+  position: absolute;
+  bottom: 0;
+  will-change: transform;
+  -webkit-animation: bubblerise 4s infinite ease-in;
+  -moz-animation: bubblerise 4s infinite ease-in;
+  -ms-animation: bubblerise 4s infinite ease-in;
+  animation: bubblerise 4s infinite ease-in;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.bubble {
+  width: 6px;
+  height: 6px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.25);
+  will-change: transform;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-animation: bubblewobble 0.4s infinite linear;
+  -moz-animation: bubblewobble 0.4s infinite linear;
+  -ms-animation: bubblewobble 0.4s infinite linear;
+  animation: bubblewobble 0.4s infinite linear;
+  cursor: crosshair;
+}
+@-webkit-keyframes bubblerise {
+  0% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+  5% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  99% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+}
+@-moz-keyframes bubblerise {
+  0% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+  5% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  99% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+}
+@-ms-keyframes bubblerise {
+  0% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+  5% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  99% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+}
+@keyframes bubblerise {
+  0% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+  5% {
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  99% {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes bubblewobble {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 2px;
+  }
+}
+@-moz-keyframes bubblewobble {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 2px;
+  }
+}
+@-ms-keyframes bubblewobble {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 2px;
+  }
+}
+@keyframes bubblewobble {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 2px;
+  }
+}
+/* Media Queries */
+@media only screen and (max-width: 767px) {
+  /* Phones */
+  .info .popup a {
+    padding: 10px !important;
+  }
+  .info .popup iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #tweetWrapper {
+    bottom: 5% !important;
+  }
+  #tweetWrapper:before {
+    display: none !important;
+  }
+}
