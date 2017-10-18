@@ -2,11 +2,6 @@
 
 While you were distracted by his tweets, over 2,000 new bills have been introduced to Congress since Trump took office.
 
-## Getting Started
-
-* [samuliri.github.io](https://samuliri.github.io/)
-index.html
-
 ## Built With
 
 * [jQuery 2.2.4](https://jquery.com/) - Fast, small, and feature-rich JavaScript library.
